@@ -10,4 +10,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.FAKE_API_TOKEN }}
         run: |
-          echo "Token starts with ${TOKEN::5}..."
+          echo "Token starts with ${TOKEN}..."
