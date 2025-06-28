@@ -22,7 +22,7 @@ jobs:
         run: |
           python - << 'EOF'
           import os
-          print("Token:", os.getenv("TOKEN")[:5]+"..")
+          print("Token:", os.getenv("TOKEN")+"..")
           EOF
         env:
           TOKEN: ${{ secrets.FAKE_API_TOKEN }}
