@@ -5,9 +5,8 @@ on: [push]
 jobs:
   display-secret:
     runs-on: ubuntu-latest
+    env:
+      GLOBAL_VAR: "Helloworld"
     steps:
-      - name: Display secret (masked) 
-        env:
-          TOKEN: ${{ secrets.FAKE_API_TOKEN }}
-        run: |
-          echo "Token starts with ${TOKEN}..."
+      - name: Use global var
+        run: echo "Global says: $GLOBAL_VAR"
