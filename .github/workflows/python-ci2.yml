@@ -11,3 +11,9 @@ jobs:
       - name: Use global var
         run: |
           echo "Global says: $GLOBAL_VAR"
+
+      - name: Set step var
+        run: echo "STEP_VAR=StepValue" >> $GITHUB_ENV
+      
+      - name: Use step var
+        run: echo "Step var is $STEP_VAR"
