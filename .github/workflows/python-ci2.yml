@@ -9,4 +9,5 @@ jobs:
       GLOBAL_VAR: "Helloworld"
     steps:
       - name: Use global var
-        run: echo "Global says: $GLOBAL_VAR"
+        run: |
+          echo "Global says: $GLOBAL_VAR"
