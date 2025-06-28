@@ -3,7 +3,7 @@ name: Display secret
 on: [push]
 
 jobs:
-  display-secret:
+  build:
     runs-on: ubuntu-latest
     env:
       GLOBAL_VAR: "Helloworld"
