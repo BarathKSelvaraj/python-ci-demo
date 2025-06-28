@@ -17,3 +17,12 @@ jobs:
       
       - name: Use step var
         run: echo "Step var is $STEP_VAR"
+
+      - name: Run API sim
+        run: |
+          python - << 'EOF'
+          import os
+          print("Token:", os.getenv("TOKEN")[:5]+"..")
+          EOF
+        env:
+          TOKEN: ${{ secrets.FAKE_API_TOKEN }}
